@@ -1,2 +1,36 @@
+.react-player {
+    margin-top: 10px;
+}
 
+.react-player video{
+    border: 2px solid white;
+    border-radius: 20px;
+}
 
+.react-empty-player{
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 50vh;    
+}
+
+.title{
+    cursor: pointer;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    border: 1px solid aqua;
+}
+
+.title:hover{
+    background-color: rgb(0, 255, 255);
+    color: black;
+}
+
+@media (max-width: 576px) { 
+    .react-player video{
+        border: transparent;
+        border-radius: 0px;
+    }
+}
