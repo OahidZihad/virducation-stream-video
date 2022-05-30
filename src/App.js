@@ -4,6 +4,7 @@ import "./App.css";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
 
 function App() {
+  // response data
   const [data, setData] = useState([
     {
       url: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
@@ -15,8 +16,10 @@ function App() {
     },
   ]);
 
+  // set video url
   const [video, setVideo] = useState();
 
+  // try to fetch from the API --> but not working
   useEffect(() => {
     fetch("http://3.237.196.207/api/videos", {
       mode: "no-cors",
@@ -38,6 +41,7 @@ function App() {
         style={{ height: "100vh" }}
       >
         <div class="col-md-12 col-lg-8">
+          {/* render the video player */}
           {video ? (
             <ReactPlayer
               className="react-player"
@@ -53,6 +57,7 @@ function App() {
           )}
         </div>
         <div class="col-md-12 col-lg-4">
+          {/* show all video list */}
           <h3>List of Videos</h3>
           {data.map((item) => {
             return (
